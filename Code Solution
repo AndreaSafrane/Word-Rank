@@ -1,0 +1,23 @@
+#Input Format
+#A string, representing a sequence of letters (A-Z).
+
+#Output Format
+#An integer, representing the rank of the given word.
+
+word = input("")
+
+from itertools import permutations
+
+word = (list(word))
+
+comb = (set(permutations(word)))
+
+comb = list(comb)
+
+comb.sort()
+
+word = tuple(word)
+
+for i in range(len(comb)):
+    if word == comb[i]:
+        print(i + 1)
